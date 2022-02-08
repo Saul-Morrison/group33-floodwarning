@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: MIT
 
 from floodsystem.stationdata import build_station_list
+from floodsystem.utils import sorted_by_key
+
 
 
 def run():
@@ -10,7 +12,6 @@ def run():
 
     # Build list of stations
     stations = build_station_list()
-
     # Print number of stations
     print("Number of stations: {}".format(len(stations)))
 
@@ -25,3 +26,4 @@ def run():
 if __name__ == "__main__":
     print("*** Task 1A: CUED Part IA Flood Warning System ***")
     run()
+
