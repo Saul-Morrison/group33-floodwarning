@@ -1,6 +1,6 @@
 from distutils.command.build import build
-from floodsystem.geo import stations_with_river
-from floodsystem.geo import stations_by_river 
+from geo import stations_with_river
+from geo import stations_by_river 
 from floodsystem.stationdata import build_station_list
 
 
