@@ -38,8 +38,7 @@ def build_station_list(use_cache=True):
 
         # Attempt to extract typical range (low, high)
         try:
-            typical_range = (float(e['stageScale']['typicalRangeLow']),
-                             float(e['stageScale']['typicalRangeHigh']))
+            typical_range = (float(e['stageScale']['typicalRangeLow']),float(e['stageScale']['typicalRangeHigh']))
         except Exception:
             typical_range = None
 

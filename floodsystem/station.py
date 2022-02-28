@@ -27,6 +27,7 @@ class MonitoringStation:
         self.river = river
         self.town = town
         
+        self.relative_level = None
 
         self.latest_level = None
         
@@ -39,7 +40,17 @@ class MonitoringStation:
 
         else:
             return True
-        
+
+    def relative_water_level(self):
+        if self.typical_range != None:
+            Typical_low = self.typical_range[0]
+            Typical_high = self.typical_range[1]
+
+            if self.latest_level != None:
+                self.relative_level = (self.latest_level - Typical_low)/ Typical_high
+            else:
+                self.relative_level = None
+        return self.relative_level    
 
 
     def __repr__(self):
@@ -50,7 +61,11 @@ class MonitoringStation:
         d += "   town:          {}\n".format(self.town)
         d += "   river:         {}\n".format(self.river)
         d += "   typical range: {}".format(self.typical_range)
+        d += "   relative level: {}".format(self.relative_level)
         return d
+
+
+    
         
         
     
