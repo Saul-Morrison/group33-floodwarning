@@ -6,6 +6,6 @@ def check_list_length():
     update_water_levels(stations)
     Station_list = [stations_level_over_threshold(stations,10 )]
     print(Station_list)
-    assert len(Station_list) == 9
+    assert len(Station_list) == 10
 
 print (check_list_length)
