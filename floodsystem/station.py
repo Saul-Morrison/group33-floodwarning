@@ -48,7 +48,7 @@ class MonitoringStation:
             Typical_high = self.typical_range[1]
 
             if self.latest_level != None:
-                self.relative_level = (self.latest_level - Typical_low)/ Typical_high
+                self.relative_level = (self.latest_level - Typical_low)/ (Typical_high - Typical_low)
             else:
                 self.relative_level = None
         return self.relative_level    
