@@ -35,3 +35,5 @@ for station in stations:
         print(station.name, MonitoringStation.relative_water_level(station))
 
 
+for station in stations:
+    print(station.name, ':  ', station.risk, '\n')

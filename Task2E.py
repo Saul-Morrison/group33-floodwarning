@@ -15,5 +15,8 @@ for station in stations:
             temp_station = station
             dates, levels = fetch_measure_levels(temp_station.measure_id, timedelta(days = 10))
             plot_water_levels(temp_station, dates, levels)
-                
+
+
+
+
 
